@@ -7,6 +7,12 @@ function form_is_submitted()
 
 function whoami()
 {
+    $format = [
+        "pge" => "PGE (Programme Grande Ecole",
+        "msc" => "MSc Pro",
+        "coding" => "Coding Acadamy",
+        "wac" => "Web@cademy",
+    ];
     $name = $_POST["name"];
     $age = $_POST["age"];
     $curriculum = $_POST["curriculum"];
@@ -19,6 +25,6 @@ function whoami()
     else   $text = "Hi, my name is $name and I'm $age years old.";
 
     if ($curriculum != "" && $curriculum != null)
-        $text .= " I'm student of $curriculum.";
+        $text .= " I'm student of $format[$curriculum].";
     echo $text;
 }
