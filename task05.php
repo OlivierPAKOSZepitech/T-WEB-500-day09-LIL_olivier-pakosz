@@ -1,9 +1,15 @@
 <?php
 
+function form_is_submitted()
+{
+    return isset($_POST["submit"]);
+}
+
 function whoami()
 {
     $name = $_POST["name"];
     $age = $_POST["age"];
+    $curriculum = $_POST["curriculum"];
     if ($name == "" && ($age == "" || $age == null))
         $text = "Hi, I have no name.";
     else if ($age == "" || $age == null)
@@ -11,5 +17,8 @@ function whoami()
     else if ($name == "" || $name == null)
         $text = "Hi, I have no name and I'm $age years old.";
     else   $text = "Hi, my name is $name and I'm $age years old.";
+
+    if ($curriculum != "" && $curriculum != null)
+        $text .= " I'm student of $curriculum.";
     echo $text;
 }
