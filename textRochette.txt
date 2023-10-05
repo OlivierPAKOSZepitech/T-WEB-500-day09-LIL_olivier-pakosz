@@ -1,0 +1,29 @@
+// Jane, 21
+
+ 
+
+curl -d "name=Jane&age=21" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost/webpool/T-WEB-500-day09-LIL_olivier-pakosz/task04.php
+
+ 
+
+// No name, no age
+
+ 
+
+curl -d "name=&age=" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost/webpool/T-WEB-500-day09-LIL_olivier-pakosz/task04.php
+
+ 
+
+// No name, age
+
+ 
+
+curl -d "name=&age=21" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost/webpool/T-WEB-500-day09-LIL_olivier-pakosz/task04.php
+
+ 
+
+// Jane, no age
+
+ 
+
+curl -d "name=Jane&age=" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost/webpool/T-WEB-500-day09-LIL_olivier-pakosz/task04.php
