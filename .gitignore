@@ -1,0 +1,6 @@
+*.php 
+!task01.php
+!task02.php
+!task03.php
+!task04.php
+!task05.php
